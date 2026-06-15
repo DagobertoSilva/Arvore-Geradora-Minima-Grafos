@@ -34,4 +34,7 @@ void adicionar_aresta(Grafo* g, int origem, int destino, double peso);
 //libernado memoria alocada
 void liberar_grafo(Grafo* g);
 
+Grafo* exec_Kruskal(Grafo *g, double* peso_total);
+Grafo* executar_prim(Grafo* g, double* peso_total);
+
 #endif

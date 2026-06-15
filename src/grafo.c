@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include "../include/grafo.h"
 
-Grafo* criar_grafo(int num_vertices, int max_arestas) {
-
-    //alocando memoria para o grafo.
+Grafo* criar_grafo(int num_vertices, int max_arestas){
+     //alocando memoria para o grafo.
     Grafo* g = (Grafo*)malloc(sizeof(Grafo));
 
     if(g == NULL){
@@ -26,10 +25,9 @@ Grafo* criar_grafo(int num_vertices, int max_arestas) {
     
     return g;
 }
-
 ///adicionando aresta nao direcionada ao grafo
 
-void adicionar_aresta(Grafo* g, int origem, int destino, double  peso){
+void adicionar_aresta(Grafo* g, int origem, int destino, double peso){
     if(g->num_arestas_atual < g->max_arestas){
         //adicionando aresta ao array de arestas
         g->array_arestas[g->num_arestas_atual].origem = origem;

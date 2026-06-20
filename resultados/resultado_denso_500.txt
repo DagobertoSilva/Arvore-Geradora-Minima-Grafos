@@ -1,0 +1,9 @@
+Tempo de leitura e construcao do grafo: 16.028 ms
+
+Iniciando execucoes do Kruskall
+Iniciando execucoes do Prim
+Custo total da AGM (Kruskal): 802.65
+Custo total da AGM (Prim):    802.65
+Ambos os algoritmos encontraram o mesmo custo minimo!
+KRUSKAL - Tempo Medio: 2.841 ms | Desvio Padrao: 1.579 ms
+PRIM  -  Tempo Medio: 2.715 ms | Desvio Padrao: 1.483 ms

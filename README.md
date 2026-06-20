@@ -56,4 +56,5 @@ Rode o orquestrador passando o caminho do arquivo de texto gerado no Passo 2. O 
 
 ```bash
 ./bin/main instancias/grafo_100_esparso.txt
+
 ```

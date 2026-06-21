@@ -16,16 +16,17 @@ O projeto está organizado na seguinte estrutura:
 ```text
 Arvore-Geradora-Minima-Grafos/
 ├── bin/            # Executáveis compilados
-├── docs/           # Relatório final e documentação
-├── include/        # Arquivos de cabeçalho (.h)
+├── docs/           # Relatório final em PDF e assets
+├── include/        # Arquivos de cabeçalho (.h) com assinaturas de TADs
 ├── instancias/     # Arquivos de texto contendo os grafos gerados (.txt)
-├── src/            # Códigos-fonte (.c)
+├── scripts/        # Scripts de automação em Bash e plotagem em Python
+├── src/            # Códigos-fonte (.c) das estruturas e algoritmos
 └── README.md
 ```
 ## Pré-requisitos
 - Compilador GCC instalado.
-
-## Como Compilar e Executar no Terminal
+- Python 3.x com pandas e matplotlib (Apenas para geração dos gráficos).
+## Compilação e Execução Manuall
 Abra o terminal na pasta raiz do projeto e siga os passos abaixo.
 
 1. Compilar o Gerador de Instâncias
@@ -56,5 +57,20 @@ Rode o orquestrador passando o caminho do arquivo de texto gerado no Passo 2. O 
 
 ```bash
 ./bin/main instancias/grafo_100_esparso.txt
+
+```
+
+## Testes automatizados
+
+Para reproduzir o experimento completo documentado no relatório, utilize o script Bash fornecido. Ele compilará automaticamente os arquivos, gerará as instâncias necessárias e salvará os tempos de execução em arquivos .csv.
+
+```bash
+chmod +x scripts/rodar_testes.sh
+
+```
+
+
+```bash
+./scripts/rodar_testes.sh
 
 ```

@@ -65,12 +65,12 @@ Rode o orquestrador passando o caminho do arquivo de texto gerado no Passo 2. O 
 Para reproduzir o experimento completo documentado no relatório, utilize o script Bash fornecido. Ele compilará automaticamente os arquivos, gerará as instâncias necessárias e salvará os tempos de execução em arquivos .csv.
 
 ```bash
-chmod +x scripts/rodar_testes.sh
+chmod +x scripts/rodar_teste.sh
 
 ```
 
 
 ```bash
-./scripts/rodar_testes.sh
+./scripts/rodar_teste.sh
 
 ```

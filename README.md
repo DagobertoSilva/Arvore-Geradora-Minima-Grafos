@@ -36,7 +36,24 @@ O gerador cria grafos conexos aleatórios garantindo que existe pelo menos uma �
 ```bash
 gcc src/gerador.c -Wall -Wextra -o bin/gerador
 ```
+⚠️Possível erro de compilação
 
+Ao compilar, pode ocorrer o seguinte erro:
+```bash
+'for' loop initial declarations are only allowed in C99 or C11 mode
+```
+✅ Solução
+
+Se esse erro ocorrer, compile utilizando o padrão C99 ou C11:
+
+✔️ C99
+```bash
+gcc src/gerador.c -Wall -Wextra -std=c99 -o bin/gerador
+```
+✔️ C11 (recomendado)
+```bash
+gcc src/gerador.c -Wall -Wextra -std=c11 -o bin/gerador
+```
 2. Gerar um Grafo de Teste
 Execute o gerador passando o número de vértices, o número de arestas e o caminho do arquivo de saída.
 
@@ -52,6 +69,21 @@ O programa principal lê o grafo e executa a bateria de testes. Como utilizamos 
 gcc src/main.c src/grafo.c src/estruturas.c src/kruskal.c src/prim.c -Wall -Wextra -I./include -lm -o bin/main
 ```
 
+Ao compilar o projeto com o GCC, podem ocorrer diversos erros como:
+
+```bash
+'for' loop initial declarations are only allowed in C99 or C11 mode
+```
+
+✅ Solução
+
+Para resolver o problema, compile o projeto utilizando o padrão C11.
+
+✔️ Solução recomendada (C11)
+```bash
+gcc src/main.c src/grafo.c src/estruturas.c src/kruskal.c src/prim.c -Wall -Wextra -std=c11 -I./include -lm -o bin/main
+```
+
 4. Executar os Algoritmos
 Rode o orquestrador passando o caminho do arquivo de texto gerado no Passo 2. O programa isola o tempo de I/O, roda cada algoritmo 10 vezes consecutivas e exibe a média e o desvio padrão em milissegundos.
 
@@ -64,6 +96,8 @@ Rode o orquestrador passando o caminho do arquivo de texto gerado no Passo 2. O 
 
 Para reproduzir o experimento completo documentado no relatório, utilize o script Bash fornecido. Ele compilará automaticamente os arquivos, gerará as instâncias necessárias e salvará os tempos de execução em arquivos .csv.
 
+Se estiver no Linux
+
 ```bash
 chmod +x scripts/rodar_teste.sh
 
@@ -74,3 +108,8 @@ chmod +x scripts/rodar_teste.sh
 ./scripts/rodar_teste.sh
 
 ```
+
+se estiver no Windows
+```b
+bash scripts/rodar_teste.sh 
+```   

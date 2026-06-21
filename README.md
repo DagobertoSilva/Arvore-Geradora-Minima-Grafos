@@ -45,6 +45,7 @@ Ao compilar, pode ocorrer o seguinte erro:
 ✅ Solução
 
 Se esse erro ocorrer, compile utilizando o padrão C99 ou C11:
+
 ✔️ C11 (recomendado)
 ```bash
 gcc src/gerador.c -Wall -Wextra -std=c11 -o bin/gerador

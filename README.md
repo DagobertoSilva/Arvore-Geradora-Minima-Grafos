@@ -26,6 +26,7 @@ Arvore-Geradora-Minima-Grafos/
 ## Pré-requisitos
 - Compilador GCC instalado.
 - Python 3.x com pandas e matplotlib (Apenas para geração dos gráficos).
+- Sistema operacional LINUX
 ## Compilação e Execução Manuall
 Abra o terminal na pasta raiz do projeto e siga os passos abaixo.
 
@@ -111,7 +112,3 @@ chmod +x scripts/rodar_teste.sh
 
 ```
 
-se estiver no Windows
-```b
-bash scripts/rodar_teste.sh 
-```   
